@@ -1,0 +1,11 @@
+{
+  "short_name": "Karna Dynamics",
+  "name": "Karna Dynamics Private Limited",
+  "icons": [
+    { "src": "logo-mark-dark.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0B0B0B",
+  "background_color": "#0B0B0B"
+}
