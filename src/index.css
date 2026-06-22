@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-ink text-silver font-body antialiased;
+    margin: 0;
+    background-image:
+      radial-gradient(circle at 20% 0%, rgba(109,190,69,.08), transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(192,192,192,.05), transparent 35%);
+    background-attachment: fixed;
+  }
+  ::selection { background: #6DBE45; color: #0B0B0B; }
+  a { color: inherit; text-decoration: none; }
+  *:focus-visible { outline: 2px solid #6DBE45; outline-offset: 2px; }
+}
+
+@layer components {
+  .metal-text {
+    background: linear-gradient(180deg,#ffffff 0%,#c0c0c0 45%,#7c7f86 62%,#e8e8e8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glass { @apply border border-white/10 bg-white/[0.03] backdrop-blur-md; }
+  .glass-card { @apply glass rounded-2xl transition-all duration-300; }
+  .glass-card:hover {
+    @apply border-kgreen/40;
+    box-shadow: 0 0 0 1px rgba(109,190,69,.2), 0 18px 40px -20px rgba(109,190,69,.45);
+  }
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-kgreen; }
+  .prose-dim p { @apply mt-4 leading-relaxed text-silver-dim; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}

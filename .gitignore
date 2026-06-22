@@ -1,6 +1,9 @@
 node_modules
 build
+<<<<<<< HEAD
 .next
+=======
+>>>>>>> 51d136cad6e8585aef5f1bbf0a735746b7445288
 .env
 .env.local
 .DS_Store
